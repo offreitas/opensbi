@@ -1,0 +1,25 @@
+menu "SPDM Device Support"
+
+config SPDM
+  bool "Enables SPDM support"
+  select SPDM_MBEDTLS
+  select SPDM_TRANSPORT_MCTP
+  default n
+
+config SPDM_MBEDTLS
+  bool "SPDM crypto MbedTLS"
+  default n
+
+config SPDM_OPENSSL
+  bool "SPDM crypto OpenSSL"
+  default n
+
+config SPDM_TRANSPORT_MCTP
+  bool "SPDM transport MCTP"
+  default n
+
+config SPDM_TRANSPORT_PCIDOE
+  bool "SPDM transport PCIDoe"
+  default n
+
+endmenu
